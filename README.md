@@ -44,7 +44,8 @@ Quá trình đọc dữ liệu từ HDFS tùy thuộc vào kiểu ư�
 Quá trình ghi dữ liệu lên HDFS cũng tùy thuộc vào kiểu ứng dụng và giao thức sử dụng. Tuy nhiên, quá trình trên cung cấp một khái niệm chung về cách một client có thể ghi dữ liệu lên HDFS.<br>
 
 ###
-### 
+### 4. Cơ chế chịu lỗi của data node trong HDFS
+
 
 
 
