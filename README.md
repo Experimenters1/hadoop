@@ -46,7 +46,9 @@ Quá trình ghi dữ liệu lên HDFS cũng tùy thuộc vào kiểu
 ###
 ### 4. Cơ chế chịu lỗi của data node trong HDFS
 
-
+![image](https://user-images.githubusercontent.com/64000769/226312600-e5913ba4-4889-4811-a7e5-b126e56828b6.png)
+<br>
+DataNode trong HDFS có nhiệm vụ lưu trữ dữ liệu và phục vụ cho việc đọc và ghi dữ liệu. Tuy nhiên, nếu DataNode gặp sự cố, các cơ chế chịu lỗi sẽ được triển khai để đảm bảo tính sẵn sàng và bảo mật của hệ thống HDFS.<br>
 
 
 
