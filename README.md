@@ -29,5 +29,24 @@ HDFS (Hadoop Distributed File System) là một hệ thống lưu trữ 
 6) Đọc dữ liệu từ DataNode: DataNode sẽ trả về dữ liệu đọc được từ phân vùng yêu cầu đến Client.<br>
 7) Xử lý dữ liệu: Dữ liệu đọc được từ HDFS sẽ được Client xử lý theo yêu cầu của ứng dụng.<br>
 8) Đóng kết nối: Khi xử lý dữ liệu hoàn tất, Client cần đóng kết nối với HDFS.<br>
-Quá trình đọc dữ liệu từ HDFS tùy thuộc vào kiểu ứng dụng và giao thức sử dụng. Tuy nhiên, quá trình trên cung cấp một khái niệm chung về cách một client có thể đọc dữ liệu từ HDFS.
+Quá trình đọc dữ liệu từ HDFS tùy thuộc vào kiểu ứng dụng và giao thức sử dụng. Tuy nhiên, quá trình trên cung cấp một khái niệm chung về cách một client có thể đọc dữ liệu từ HDFS.<br>
+###
+### 3. Mô tả cách thức 1 client ghi dữ liệu trên HDFS
+Để ghi dữ liệu lên HDFS, một client cần thực hiện các bước sau:<br>
+1)Tạo kết nối tới HDFS: Client cần thiết lập kết nối với HDFS thông qua một giao thức như HDFS API, WebHDFS hoặc command-line interface (CLI).<br>
+2)Tạo tệp cần ghi: Client tạo một tệp tin mới hoặc mở một tệp tin đã tồn tại để ghi dữ liệu vào.<br>
+3)Ghi dữ liệu vào tệp tin: Client sử dụng các phương thức cung cấp bởi HDFS API hoặc WebHDFS để ghi dữ liệu vào tệp tin. Trong quá trình ghi, dữ liệu sẽ được chia thành các khối và ghi lên các DataNode.<br>
+4)Xác định phân vùng cần ghi: Tương tự như khi đọc dữ liệu, tệp được lưu trữ trên HDFS sẽ được chia thành nhiều phân vùng. Client cần xác định phân vùng hoặc các phân vùng mà nó muốn ghi vào.<br>
+5)Gửi yêu cầu ghi dữ liệu đến NameNode: Yêu cầu ghi dữ liệu được gửi đến NameNode, nơi mà nó được định tuyến đến các DataNode chứa các phân vùng dữ liệu được yêu cầu.<br>
+6)Ghi dữ liệu vào DataNode: Dữ liệu được ghi vào các DataNode và được lưu trữ theo các phân vùng.<br>
+7)Đóng tệp tin: Sau khi hoàn tất việc ghi dữ liệu, Client cần đóng tệp tin để lưu lại các thay đổi.<br>
+8)Đóng kết nối: Khi việc ghi dữ liệu hoàn tất và tệp tin được đóng, Client cần đóng kết nối với HDFS.<br>
+Quá trình ghi dữ liệu lên HDFS cũng tùy thuộc vào kiểu ứng dụng và giao thức sử dụng. Tuy nhiên, quá trình trên cung cấp một khái niệm chung về cách một client có thể ghi dữ liệu lên HDFS.<br>
+
+###
+### 
+
+
+
+
       
