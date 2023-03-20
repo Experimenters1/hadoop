@@ -49,6 +49,10 @@ Quá trình ghi dữ liệu lên HDFS cũng tùy thuộc vào kiểu
 ![image](https://user-images.githubusercontent.com/64000769/226312600-e5913ba4-4889-4811-a7e5-b126e56828b6.png)
 <br>
 DataNode trong HDFS có nhiệm vụ lưu trữ dữ liệu và phục vụ cho việc đọc và ghi dữ liệu. Tuy nhiên, nếu DataNode gặp sự cố, các cơ chế chịu lỗi sẽ được triển khai để đảm bảo tính sẵn sàng và bảo mật của hệ thống HDFS.<br>
+Dưới đây là các cơ chế chịu lỗi của DataNode trong HDFS: <br>
+1)Hệ thống sao lưu: Dữ liệu trong HDFS được lưu trữ theo cơ chế sao lưu. Mỗi phân vùng dữ liệu được sao chép sang các DataNode khác nhau để đảm bảo tính sẵn sàng của dữ liệu khi có sự cố xảy ra.<br>
+2)Kiểm tra tính nguyên vẹn dữ liệu: HDFS sử dụng một thuật toán kiểm tra tính nguyên vẹn dữ liệu để phát hiện và khắc phục các lỗi trong quá trình truyền tải dữ liệu. Nếu DataNode phát hiện bất kỳ lỗi nào trong quá trình truyền tải dữ liệu, nó sẽ yêu cầu các DataNode khác sao chép lại dữ liệu.<br>
+3)
 
 
 
