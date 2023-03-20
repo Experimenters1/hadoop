@@ -16,4 +16,18 @@ Hadoop giải quyết bài toán mở rộng (scalability) bằng cách 
 <br>
 Nhờ các kỹ thuật này, Hadoop có thể mở rộng để xử lý các tập dữ liệu lớn và phức tạp hơn, đáp ứng nhu cầu của các doanh nghiệp và tổ chức.
 ###
+### 2. Mô tả cách thức 1 client đọc dữ liệu trên HDFS
+HDFS (Hadoop Distributed File System) là một hệ thống lưu trữ phân tán dành cho các ứng dụng Big Data. Để đọc dữ liệu từ HDFS, một client cần tuân thủ các bước sau: <br>
 #
+![image](https://user-images.githubusercontent.com/64000769/226307185-ee015b9e-d1a6-4d72-90df-d8d13d79c416.png)
+
+1) Tạo kết nối tới HDFS: Client cần thiết lập kết nối với HDFS thông qua một giao thức như HDFS API, WebHDFS hoặc command-line interface (CLI).<br>
+2) Xác định tệp cần đọc: Client cần xác định đường dẫn tới tệp tin trên HDFS mà họ muốn đọc.<br>
+3) Xác định phân vùng cần đọc: Khi tệp được lưu trữ trên HDFS, nó được phân tách thành nhiều phân vùng. Client cần xác định phân vùng hoặc các phân vùng mà nó cần đọc. <br>
+4) Tạo yêu cầu đọc dữ liệu: Client tạo một yêu cầu đọc dữ liệu bao gồm đường dẫn tới tệp tin, các phân vùng cần đọc và các thông số cấu hình liên quan đến việc đọc dữ liệu như buffer size.<br>
+5) Gửi yêu cầu đến NameNode: Yêu cầu đọc dữ liệu được gửi đến NameNode, nơi mà nó được định tuyến đến DataNode chứa các phân vùng dữ liệu được yêu cầu.<br>
+6) Đọc dữ liệu từ DataNode: DataNode sẽ trả về dữ liệu đọc được từ phân vùng yêu cầu đến Client.<br>
+7) Xử lý dữ liệu: Dữ liệu đọc được từ HDFS sẽ được Client xử lý theo yêu cầu của ứng dụng.<br>
+8) Đóng kết nối: Khi xử lý dữ liệu hoàn tất, Client cần đóng kết nối với HDFS.<br>
+Quá trình đọc dữ liệu từ HDFS tùy thuộc vào kiểu ứng dụng và giao thức sử dụng. Tuy nhiên, quá trình trên cung cấp một khái niệm chung về cách một client có thể đọc dữ liệu từ HDFS.
+      
