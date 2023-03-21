@@ -54,7 +54,10 @@ Dưới đây là các cơ chế chịu lỗi của DataNode trong HDFS:
 2)Kiểm tra tính nguyên vẹn dữ liệu: HDFS sử dụng một thuật toán kiểm tra tính nguyên vẹn dữ liệu để phát hiện và khắc phục các lỗi trong quá trình truyền tải dữ liệu. Nếu DataNode phát hiện bất kỳ lỗi nào trong quá trình truyền tải dữ liệu, nó sẽ yêu cầu các DataNode khác sao chép lại dữ liệu.<br>
 3)Chuyển tiếp dữ liệu: Nếu DataNode gặp sự cố, nó sẽ thông báo cho các DataNode khác về sự cố này. Các DataNode khác sẽ chuyển tiếp các yêu cầu của Client đến các DataNode khác chứa dữ liệu thay vì gửi yêu cầu trực tiếp đến DataNode gặp sự cố.<br>
 4)Xác thực: HDFS sử dụng các cơ chế xác thực để đảm bảo tính bảo mật của dữ liệu. Khi một DataNode gặp sự cố, các DataNode khác sẽ tiếp tục sử dụng các cơ chế xác thực để đảm bảo rằng dữ liệu không bị truy cập hoặc thay đổi bởi người dùng không được ủy quyền.<br>
-5)
+5)Cập nhật metadata: Nếu DataNode gặp sự cố, NameNode sẽ cập nhật metadata để đảm bảo tính nhất quán của hệ thống HDFS. NameNode sẽ loại bỏ DataNode gặp sự cố khỏi danh sách các DataNode đang hoạt động và sử dụng các DataNode khác để cung cấp dịch vụ cho Client.<br>
+Tóm lại, HDFS có các cơ chế chịu lỗi để đảm bảo tính sẵn sàng, bảo mật và nhất quán của dữ liệu khi DataNode gặp sự cố. Các cơ chế này giúp đảm
+###
+
 
 
 
