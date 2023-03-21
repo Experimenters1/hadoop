@@ -63,7 +63,15 @@ Hadoop Distributed File System (HDFS) là một hệ thống lưu trữ 
 ![image](https://user-images.githubusercontent.com/64000769/226619755-93cc4fe8-944d-4dfd-963d-d4fe36707b6a.png)
 <br>
 1)Block Size: HDFS chia các tập tin thành các khối (block) có kích thước mặc định là 128MB. Việc chia dữ liệu thành các khối giúp dễ dàng quản lý và nhân bản dữ liệu.<br>
-2)
+2)Replication Factor: HDFS nhân bản mỗi khối dữ liệu trên nhiều DataNode (mặc định là 3 DataNode). Số lượng DataNode được chọn để nhân bản được xác định bởi Replication Factor. Các bản sao này được lưu trữ trên các DataNode khác nhau trong cụm Hadoop.<br>
+3)DataNode Placement: HDFS chọn các DataNode để lưu trữ các bản sao của khối dữ liệu dựa trên vị trí vật lý của các DataNode và tránh lưu trữ các bản sao trên cùng một máy chủ hoặc cùng một giá trị rack.<br>
+4)DataNode Failure: Nếu một DataNode gặp sự cố, các bản sao của khối dữ liệu được lưu trữ trên DataNode khác sẽ được sử dụng để đảm bảo tính sẵn sàng và bảo mật của dữ liệu.<br>
+5)Block Replication: Khi một DataNode mới được thêm vào cụm, HDFS sẽ tự động nhân bản các khối dữ liệu sang DataNode mới đó để đảm bảo rằng số lượng bản sao đáp ứng yêu cầu của Replication Factor.<br>
+Cơ chế nhân bản dữ liệu trong HDFS đảm bảo tính sẵn sàng và bảo mật của dữ liệu bằng cách lưu trữ các bản sao của dữ liệu trên nhiều DataNode khác nhau. Nếu một DataNode gặp sự cố, các bản sao của dữ liệu sẽ được sử dụng để đảm bảo rằng dữ liệu vẫn có sẵn và an toàn.<br><br>
+
+####
+
+
 
 
 
