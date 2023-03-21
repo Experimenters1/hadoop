@@ -58,6 +58,13 @@ Dưới đây là các cơ chế chịu lỗi của DataNode trong HDFS:
 Tóm lại, HDFS có các cơ chế chịu lỗi để đảm bảo tính sẵn sàng, bảo mật và nhất quán của dữ liệu khi DataNode gặp sự cố. Các cơ chế này giúp đảm
 ###
 
+### 5. Cơ chế nhân bản dữ liệu trong HDFS
+Hadoop Distributed File System (HDFS) là một hệ thống lưu trữ phân tán, có khả năng nhân bản dữ liệu để đảm bảo tính sẵn sàng và bảo mật của dữ liệu. Dưới đây là cơ chế nhân bản dữ liệu trong HDFS: <br><br>
+![image](https://user-images.githubusercontent.com/64000769/226619755-93cc4fe8-944d-4dfd-963d-d4fe36707b6a.png)
+<br>
+1)Block Size: HDFS chia các tập tin thành các khối (block) có kích thước mặc định là 128MB. Việc chia dữ liệu thành các khối giúp dễ dàng quản lý và nhân bản dữ liệu.<br>
+2)
+
 
 
 
