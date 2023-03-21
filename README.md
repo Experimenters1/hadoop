@@ -86,6 +86,13 @@ Nhờ các kỹ thuật này, HDFS giải quyết được bài toán 
 
 Job tracker và Task tracker là hai thành phần quan trọng trong kiến trúc của Hadoop. Cả hai đều có vai trò quan trọng trong việc quản lý và thực thi các tác vụ trong Hadoop.<br>
 
+Job tracker là thành phần trung tâm của Hadoop và có nhiệm vụ quản lý tất cả các tác vụ được gửi đến cluster. Nó nhận các yêu cầu xử lý từ người dùng thông qua giao diện dòng lệnh hoặc giao diện người dùng web, sau đó phân phối chúng đến các Task tracker để thực thi. Job tracker cũng theo dõi quá trình thực thi của các tác vụ và cập nhật trạng thái của chúng cho người dùng.<br>
+
+Task tracker là thành phần thực thi các tác vụ trong Hadoop. Nó được cài đặt trên từng node trong cluster và chạy các tác vụ được giao cho nó bởi Job tracker. Task tracker có nhiệm vụ chia nhỏ các tác vụ thành các phần nhỏ hơn gọi là task và thực thi chúng trên các node của cluster. Sau khi task hoàn thành, Task tracker cập nhật trạng thái của chúng cho Job tracker. <br>
+
+Tóm lại, Job tracker và Task tracker là hai thành phần cơ bản trong Hadoop và đóng vai trò quan trọng trong quản lý và thực thi các tác vụ. Job tracker quản lý tất cả các tác vụ và phân phối chúng cho Task tracker, trong khi Task tracker thực thi các tác vụ được giao cho nó và cập nhật trạng thái của chúng cho Job tracker.   <br>
+####
+
 
 
 
