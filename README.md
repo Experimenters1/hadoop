@@ -120,6 +120,8 @@ HDFS (Hadoop Distributed File System) là một phần của Hadoop, đươ
 6. Rack: Rack là một tập hợp các máy chủ được kết nối với nhau thông qua một switch. HDFS sử dụng thông tin về Rack để đặt các bản sao của các khối dữ liệu trên các Rack khác nhau để đảm bảo tính khả dụng và hiệu suất của dữ liệu.<br> <br>
 Tóm lại, HDFS là một hệ thống tập tin phân tán được xây dựng trên các máy chủ và lưu trữ dữ liệu dưới dạng các khối được phân tán trên nhiều DataNode. Việc sao lưu dữ liệu, quản lý metadata và định vị vị trí khối dữ liệu được thực hiện bởi NameNode, còn việc lưu trữ dữ liệu và báo cáo trạng thái của các khối dữ liệu được thực hiện <br>
 ###
+### 11. Nguyên lý thiết kế cốt lõi của HDFS <br>
+HDFS (Hadoop Distributed File System) được thiết kế để lưu trữ và quản lý dữ liệu lớn trên các cụm máy tính phân tán. Các nguyên lý thiết kế cốt lõi của HDFS bao gồm:
 
 
 
