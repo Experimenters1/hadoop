@@ -92,6 +92,28 @@ Task tracker là thành phần thực thi các tác vụ trong Hadoop. No�
 
 Tóm lại, Job tracker và Task tracker là hai thành phần cơ bản trong Hadoop và đóng vai trò quan trọng trong quản lý và thực thi các tác vụ. Job tracker quản lý tất cả các tác vụ và phân phối chúng cho Task tracker, trong khi Task tracker thực thi các tác vụ được giao cho nó và cập nhật trạng thái của chúng cho Job tracker.   <br>
 ####
+### 8. YARN trong hadoop có vai trò gì <br>
+![image](https://user-images.githubusercontent.com/64000769/226642582-1ac1d880-0293-48fe-ae38-8acf0e82f804.png)
+
+YARN (Yet Another Resource Negotiator) là một thành phần quan trọng trong Hadoop, chịu trách nhiệm quản lý và phân phối tài nguyên cho các ứng dụng chạy trên Hadoop. Cụ thể, YARN cho phép chia tách hai phần của khả năng xử lý dữ liệu trên Hadoop, đó là phần quản lý tài nguyên và phần xử lý dữ liệu.<br>
+Các thành phần chính của YARN bao gồm:<br>
+1. Resource Manager: Là thành phần quản lý tài nguyên trung tâm trên một cụm Hadoop. Resource Manager quản lý và cung cấp tài nguyên cho các ứng dụng chạy trên Hadoop bằng cách quản lý Node Manager trên mỗi node của cụm.<br>
+2. Node Manager: Là thành phần quản lý tài nguyên trên mỗi node của cụm Hadoop. Node<br>
+
+###
+### 9. Hadoop giải quyết bài toán chịu lỗi như thế nào? <br>
+Hadoop là một framework mã nguồn mở được sử dụng để xử lý dữ liệu lớn trên các cụm máy tính phân tán. Hadoop giải quyết bài toán chịu lỗi bằng cách sử dụng một số kỹ thuật sau: <br>
+1. Replication: Hadoop lưu trữ dữ liệu bằng cách phân chia nó thành các khối và lưu trữ các bản sao của từng khối trên nhiều máy chủ khác nhau. Việc lưu trữ nhiều bản sao này giúp đảm bảo rằng nếu một máy chủ bị lỗi, dữ liệu vẫn có thể được truy xuất từ các bản sao khác. <br>
+2. JobTracker và TaskTracker: Hadoop có hai thành phần chính để quản lý và xử lý công việc. JobTracker giám sát các công việc và phân phối chúng cho các TaskTracker trên các nút khác nhau trong cụm. TaskTracker thực hiện các công việc và báo cáo trạng thái của chúng lại cho JobTracker. Nếu một TaskTracker bị lỗi, công việc sẽ được phân phối lại cho một TaskTracker khác.<br>
+3. Heartbeat mechanism: Hadoop sử dụng một cơ chế heartbeat để giám sát trạng thái của các thành phần trong cụm. Các thành phần trong cụm gửi thông điệp heartbeat cho nhau để báo cáo trạng thái hoạt động. Nếu một thành phần không gửi heartbeat, Hadoop sẽ coi nó là lỗi và thực hiện các hành động cần thiết để khắc phục sự cố. <br><br>
+Tóm lại, Hadoop sử dụng các kỹ thuật sao lưu và phân phối để đảm bảo rằng dữ liệu vẫn có thể truy xuất được nếu một phần của cụm bị lỗi. Nó cũng sử dụng các cơ chế giám sát và phân phối lại công việc để đảm bảo rằng các công việc được hoàn thành một cách hiệu quả, ngay cả khi có lỗi xảy ra trên một hoặc nhiều nút trong cụm. <br>
+###
+### 10. Kiến trúc của HDFS <br>
+HDFS (Hadoop Distributed File System) là một phần của Hadoop, được sử dụng để lưu trữ và quản lý dữ liệu lớn trên các cụm máy tính phân tán. Kiến trúc của HDFS bao gồm các thành phần sau: <br>
+
+
+
+
 
 
 
