@@ -109,8 +109,11 @@ Hadoop là một framework mã nguồn mở được sử dụng để
 Tóm lại, Hadoop sử dụng các kỹ thuật sao lưu và phân phối để đảm bảo rằng dữ liệu vẫn có thể truy xuất được nếu một phần của cụm bị lỗi. Nó cũng sử dụng các cơ chế giám sát và phân phối lại công việc để đảm bảo rằng các công việc được hoàn thành một cách hiệu quả, ngay cả khi có lỗi xảy ra trên một hoặc nhiều nút trong cụm. <br>
 ###
 ### 10. Kiến trúc của HDFS <br>
+![image](https://user-images.githubusercontent.com/64000769/226646176-0c42dc54-76a9-4242-863b-975df4d6d8e9.png)
+<br>
 HDFS (Hadoop Distributed File System) là một phần của Hadoop, được sử dụng để lưu trữ và quản lý dữ liệu lớn trên các cụm máy tính phân tán. Kiến trúc của HDFS bao gồm các thành phần sau: <br>
-
+1. NameNode: NameNode là thành phần trung tâm của HDFS. Nó làm nhiệm vụ quản lý metadata của hệ thống tập tin, bao gồm thông tin về tên, đường dẫn và kích thước các tệp, cũng như vị trí và trạng thái của các khối dữ liệu trong hệ thống. NameNode cũng giữ một bản sao của metadata trên đĩa cứng.<br>
+2. 
 
 
 
