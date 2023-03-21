@@ -70,6 +70,14 @@ Hadoop Distributed File System (HDFS) là một hệ thống lưu trữ 
 Cơ chế nhân bản dữ liệu trong HDFS đảm bảo tính sẵn sàng và bảo mật của dữ liệu bằng cách lưu trữ các bản sao của dữ liệu trên nhiều DataNode khác nhau. Nếu một DataNode gặp sự cố, các bản sao của dữ liệu sẽ được sử dụng để đảm bảo rằng dữ liệu vẫn có sẵn và an toàn.<br><br>
 
 ####
+### 6. HDFS giải quyêt bài toán single-point-of-failure cho namenode bằng cách nào <br>
+HDFS giải quyết bài toán single-point-of-failure cho NameNode bằng cách sử dụng một số kỹ thuật sau:<br>
+1)Secondary NameNode: HDFS sử dụng một Secondary NameNode để sao lưu metadata từ NameNode. Trong trường hợp NameNode gặp sự cố, Secondary NameNode sẽ được sử dụng để khôi phục lại metadata và bắt đầu hoạt động như một NameNode mới.<br>
+2)Hadoop High Availability (HA): Hadoop High Availability là một tính năng mới được giới thiệu trong phiên bản Hadoop 2.0.0, cung cấp một cách tiếp cận khác để giải quyết bài toán single-point-of-failure cho NameNode. Với Hadoop HA, cụm Hadoop được cấu hình với hai NameNode, một NameNode chính và một NameNode phụ. NameNode chính xử lý các yêu cầu ghi và NameNode phụ đảm nhiệm sao chép dữ liệu giữa các NameNode. Khi NameNode chính gặp sự cố, NameNode phụ sẽ lên làm chính và tiếp tục xử lý các yêu cầu ghi.<br>
+3)DataNode Heartbeats: HDFS sử dụng giao thức Heartbeat để giám sát tình trạng hoạt động của DataNode. Nếu một DataNode không phản hồi trong khoảng thời gian quy định, NameNode sẽ cho rằng DataNode đó đã gặp sự cố và chuyển dữ liệu sang DataNode khác.<br>
+Nhờ các kỹ thuật này, HDFS giải quyết được bài toán single-point-of-failure cho NameNode và đảm bảo tính sẵn sàng và bảo mật của dữ liệu trong cụm Hadoop.
+<br>
+
 
 
 
