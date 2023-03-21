@@ -81,6 +81,8 @@ Nhờ các kỹ thuật này, HDFS giải quyết được bài toán 
 ###
 ### 7. Vai trò của Job tracker và Task tracker trong hadoop <br>
 ![image](https://user-images.githubusercontent.com/64000769/226623285-90e80f48-5c1b-4957-b350-57580bc950a0.png)
+![image](https://user-images.githubusercontent.com/64000769/226623466-d5f7cf4b-0305-4621-afed-dc682042cf28.png)
+![image](https://user-images.githubusercontent.com/64000769/226623675-9d66ea41-6cfd-441f-9022-ce04017e78ef.png)
 
 Job tracker và Task tracker là hai thành phần quan trọng trong kiến trúc của Hadoop. Cả hai đều có vai trò quan trọng trong việc quản lý và thực thi các tác vụ trong Hadoop.<br>
 
