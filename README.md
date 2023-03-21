@@ -113,7 +113,14 @@ Tóm lại, Hadoop sử dụng các kỹ thuật sao lưu và phân phô
 <br>
 HDFS (Hadoop Distributed File System) là một phần của Hadoop, được sử dụng để lưu trữ và quản lý dữ liệu lớn trên các cụm máy tính phân tán. Kiến trúc của HDFS bao gồm các thành phần sau: <br>
 1. NameNode: NameNode là thành phần trung tâm của HDFS. Nó làm nhiệm vụ quản lý metadata của hệ thống tập tin, bao gồm thông tin về tên, đường dẫn và kích thước các tệp, cũng như vị trí và trạng thái của các khối dữ liệu trong hệ thống. NameNode cũng giữ một bản sao của metadata trên đĩa cứng.<br>
-2. 
+2. DataNode: DataNode là thành phần lưu trữ thực sự của HDFS. Nó lưu trữ các khối dữ liệu được phân chia từ các tệp, cũng như các bản sao của các khối đó. Mỗi DataNode báo cáo trạng thái của các khối dữ liệu mà nó đang lưu trữ cho NameNode.<br>
+3. Block: HDFS phân chia dữ liệu thành các khối (block) có kích thước mặc định là 128MB. Các khối này được lưu trữ trên các DataNode khác nhau trong cụm.<br>
+4. Replica: HDFS sử dụng kỹ thuật sao lưu (replication) để đảm bảo tính sẵn sàng và độ tin cậy của dữ liệu. Các bản sao của các khối dữ liệu được tạo ra và được lưu trữ trên nhiều DataNode khác nhau trong cụm.<br>
+5. Client: Người dùng hoặc ứng dụng sử dụng Client để truy cập và thao tác với dữ liệu trên HDFS. Client sử dụng API để tạo, đọc và ghi tệp vào HDFS.<br>
+6. Rack: Rack là một tập hợp các máy chủ được kết nối với nhau thông qua một switch. HDFS sử dụng thông tin về Rack để đặt các bản sao của các khối dữ liệu trên các Rack khác nhau để đảm bảo tính khả dụng và hiệu suất của dữ liệu.<br> <br>
+Tóm lại, HDFS là một hệ thống tập tin phân tán được xây dựng trên các máy chủ và lưu trữ dữ liệu dưới dạng các khối được phân tán trên nhiều DataNode. Việc sao lưu dữ liệu, quản lý metadata và định vị vị trí khối dữ liệu được thực hiện bởi NameNode, còn việc lưu trữ dữ liệu và báo cáo trạng thái của các khối dữ liệu được thực hiện <br>
+###
+
 
 
 
