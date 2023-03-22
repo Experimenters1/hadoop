@@ -134,8 +134,10 @@ Tóm lại, các nguyên lý thiết kế cốt lõi của HDFS nhằm 
 ### 12. Mô thức xử lý dữ liệu MapReduce
 ![image](https://user-images.githubusercontent.com/64000769/226847013-02eb9a5d-5351-48fd-b4fc-bf1ac217c364.png)
 <br>
-MapReduce là một mô hình lập trình để xử lý dữ liệu phân tán, được phát triển bởi Google và được Hadoop triển khai lại. Mô thức xử lý dữ liệu MapReduce bao gồm hai giai đoạn chính là Map và Reduce.<br>
-1. Giai đoạn Map:
+MapReduce là một mô hình lập trình để xử lý dữ liệu phân tán, được phát triển bởi Google và được Hadoop triển khai lại. Mô thức xử lý dữ liệu MapReduce bao gồm hai giai đoạn chính là Map và Reduce.<br> <br>
+1. Giai đoạn Map: <br>
+Trong giai đoạn này, dữ liệu được đọc từ HDFS và được xử lý bởi các hàm Map. Hàm Map được định nghĩa bởi người dùng và thực hiện việc chuyển đổi dữ liệu vào một cặp khóa-giá trị (key- value pair). Các khóa-giá trị này được sử dụng để phân tán dữ liệu đến các tác vụ Reduce khác nhau. Sau khi tác vụ Map hoàn tất, các cặp khóa-giá trị được sắp xếp và gom nhóm lại theo khóa chung.<br>
+
 
 
 
