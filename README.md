@@ -120,8 +120,27 @@ HDFS (Hadoop Distributed File System) là một phần của Hadoop, đươ
 6. Rack: Rack là một tập hợp các máy chủ được kết nối với nhau thông qua một switch. HDFS sử dụng thông tin về Rack để đặt các bản sao của các khối dữ liệu trên các Rack khác nhau để đảm bảo tính khả dụng và hiệu suất của dữ liệu.<br> <br>
 Tóm lại, HDFS là một hệ thống tập tin phân tán được xây dựng trên các máy chủ và lưu trữ dữ liệu dưới dạng các khối được phân tán trên nhiều DataNode. Việc sao lưu dữ liệu, quản lý metadata và định vị vị trí khối dữ liệu được thực hiện bởi NameNode, còn việc lưu trữ dữ liệu và báo cáo trạng thái của các khối dữ liệu được thực hiện <br>
 ###
-### 11. Nguyên lý thiết kế cốt lõi của HDFS <br>
-HDFS (Hadoop Distributed File System) được thiết kế để lưu trữ và quản lý dữ liệu lớn trên các cụm máy tính phân tán. Các nguyên lý thiết kế cốt lõi của HDFS bao gồm:
+###  11. Nguyên lý thiết kế cốt lõi của HDFS <br>
+![image](https://user-images.githubusercontent.com/64000769/226833025-7218a89e-ee10-46f2-bdea-c64725df0fea.png)
+
+HDFS (Hadoop Distributed File System) được thiết kế để lưu trữ và quản lý dữ liệu lớn trên các cụm máy tính phân tán. Các nguyên lý thiết kế cốt lõi của HDFS bao gồm:<br>
+1.Phân chia dữ liệu thành các khối (block): HDFS phân chia dữ liệu thành các khối có kích thước mặc định là 128MB. Việc này giúp phân tán dữ liệu trên nhiều máy tính khác nhau trong cụm và làm tăng khả năng xử lý song song của hệ thống.<br>
+2.Sao lưu dữ liệu: HDFS sử dụng kỹ thuật sao lưu (replication) để đảm bảo tính sẵn sàng và độ tin cậy của dữ liệu. Các bản sao của các khối dữ liệu được tạo ra và được lưu trữ trên nhiều DataNode khác nhau trong cụm.<br>
+3.Quản lý metadata trung tâm: HDFS có một NameNode là thành phần trung tâm quản lý metadata của hệ thống tập tin, bao gồm thông tin về tên, đường dẫn và kích thước các tệp, cũng như vị trí và trạng thái của các khối dữ liệu trong hệ thống. Việc giữ metadata trung tâm giúp cho HDFS có thể xử lý các yêu cầu của người dùng về dữ liệu nhanh chóng và hiệu quả.<br>
+4.Xử lý dữ liệu tập trung: HDFS xử lý dữ liệu tập trung bằng cách đưa dữ liệu đến nơi xử lý thay vì đưa code xử lý đến nơi dữ liệu. Việc xử lý tập trung này giúp giảm tải cho mạng và tăng tốc độ xử lý dữ liệu. <br>
+5.Hỗ trợ xử lý dữ liệu lớn: HDFS được thiết kế để xử lý dữ liệu lớn, với số lượng khối dữ liệu và lượng dữ liệu rất lớn. HDFS có thể xử lý dữ liệu với tốc độ cao và sử dụng được cho nhiều loại ứng dụng khác nhau. <br> <br>
+Tóm lại, các nguyên lý thiết kế cốt lõi của HDFS nhằm tăng tính phân tán, độ tin cậy và tính sẵn sàng của dữ liệu, giúp xử lý dữ liệu tập trung và hỗ trợ xử lý dữ liệu lớn. <br>
+###
+### 12. Mô thức xử lý dữ liệu MapReduce
+![image](https://user-images.githubusercontent.com/64000769/226847013-02eb9a5d-5351-48fd-b4fc-bf1ac217c364.png)
+<br>
+MapReduce là một mô hình lập trình để xử lý dữ liệu phân tán, được phát triển bởi Google và được Hadoop triển khai lại. Mô thức xử lý dữ liệu MapReduce bao gồm hai giai đoạn chính là Map và Reduce.<br>
+1. Giai đoạn Map:
+
+
+
+
+
 
 
 
